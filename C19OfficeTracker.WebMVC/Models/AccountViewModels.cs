@@ -70,6 +70,11 @@ namespace C19OfficeTracker.WebMVC.Models
         public string Email { get; set; }
 
         [Required]
+        [StringLength(60, ErrorMessage = "The Name must be at least 10 characters long but not longer than 60 characters", MinimumLength = 10)]
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
