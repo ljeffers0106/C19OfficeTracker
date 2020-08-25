@@ -1,5 +1,3 @@
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.csprojAssemblyReference.cache
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\bin\C19OfficeTracker.WebMVC.dll.config
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\bin\C19OfficeTracker.WebMVC.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\bin\C19OfficeTracker.WebMVC.pdb
@@ -112,6 +110,8 @@ C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\bin\Microsoft.Owin.Security.OAuth.xml
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.csproj.CopyComplete
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.WebMVC\obj\Debug\C19OfficeTracker.WebMVC.pdb

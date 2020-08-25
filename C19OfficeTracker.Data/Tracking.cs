@@ -32,8 +32,8 @@ namespace C19OfficeTracker.Data
         [MaxLength(3, ErrorMessage = "Please enter ( yes or no ) only.")]
         public string GroupAnswer { get; set; }
 
-        public string Id { get; set; }
-        [ForeignKey(nameof(Id))]
+        public int EmpId { get; set; }
+        [ForeignKey(nameof(EmpId))]
         public virtual Employee Employee { get; set; }
     }
 }

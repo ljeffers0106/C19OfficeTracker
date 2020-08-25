@@ -13,7 +13,6 @@ namespace C19OfficeTracker.Data
         public int DeptId { get; set; }
         [Required]
         public string DeptName { get; set; }
-        [Required]
         public int Building { get; set; }
         [Required]
         public string Location { get; set; }

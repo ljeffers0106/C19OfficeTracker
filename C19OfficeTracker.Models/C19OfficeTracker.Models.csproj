@@ -54,11 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeCreate.cs" />
+    <Compile Include="EmployeeDetail.cs" />
+    <Compile Include="EmployeeEdit.cs" />
+    <Compile Include="EmployeeListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C19OfficeTracker.Data\C19OfficeTracker.Data.csproj">
+      <Project>{8F1BFB7E-D981-425C-BAD5-D445BC413492}</Project>
+      <Name>C19OfficeTracker.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

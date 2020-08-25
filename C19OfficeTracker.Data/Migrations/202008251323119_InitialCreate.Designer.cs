@@ -13,7 +13,7 @@ namespace C19OfficeTracker.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008241512515_InitialCreate"; }
+            get { return "202008251323119_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

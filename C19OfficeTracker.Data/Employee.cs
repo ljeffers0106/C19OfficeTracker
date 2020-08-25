@@ -15,13 +15,10 @@ namespace C19OfficeTracker.Data
         Manager = 3,
         Associate = 4
     }
-    public class Employee : ApplicationUser
+    public class Employee : DomainUser
     {
-        
-        public Guid IndiviualId { get; set; }
-        [Required]
-        [MaxLength(13, ErrorMessage = "Please enter up to 10 numbers with (-,())")]
-        public string Phone { get; set; }
+        [Key]
+        public int EmpId { get; set; }
         [Required]
         public DateTime HireDate { get; set; }
         [Required]

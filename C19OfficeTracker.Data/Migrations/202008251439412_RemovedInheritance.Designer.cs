@@ -7,13 +7,13 @@ namespace C19OfficeTracker.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class IdentityPropsAdded : IMigrationMetadata
+    public sealed partial class RemovedInheritance : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(IdentityPropsAdded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RemovedInheritance));
         
         string IMigrationMetadata.Id
         {
-            get { return "202008241542295_IdentityPropsAdded"; }
+            get { return "202008251439412_RemovedInheritance"; }
         }
         
         string IMigrationMetadata.Source

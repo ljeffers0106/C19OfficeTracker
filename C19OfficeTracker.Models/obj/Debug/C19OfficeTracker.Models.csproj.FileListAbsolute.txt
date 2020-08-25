@@ -1,10 +1,13 @@
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\C19OfficeTracker.Models.dll.config
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\C19OfficeTracker.Models.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\C19OfficeTracker.Models.pdb
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\C19OfficeTracker.Data.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\EntityFramework.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\EntityFramework.SqlServer.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\C19OfficeTracker.Data.pdb
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\C19OfficeTracker.Data.dll.config
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\EntityFramework.xml
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml

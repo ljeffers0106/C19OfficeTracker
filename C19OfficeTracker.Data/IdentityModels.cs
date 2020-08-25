@@ -37,6 +37,7 @@ namespace C19OfficeTracker.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Tracking> Trackings { get; set; }
+       
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -48,19 +49,19 @@ namespace C19OfficeTracker.Data
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
         }
-    }
-    public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
-    {
-        public IdentityUserLoginConfiguration()
+        public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
         {
-            HasKey(iul => iul.UserId);
+            public IdentityUserLoginConfiguration()
+            {
+                HasKey(iul => iul.UserId);
+            }
         }
-    }
-    public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
-    {
-        public IdentityUserRoleConfiguration()
+        public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
         {
-            HasKey(iur => iur.UserId);
+            public IdentityUserRoleConfiguration()
+            {
+                HasKey(iur => iur.UserId);
+            }
         }
     }
 }
