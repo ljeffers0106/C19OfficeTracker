@@ -19,3 +19,4 @@ C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.RemovedInheritance.resources
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.MakeDeptIDNullable.resources
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.RemovedNullableDeptId.resources
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.CompletedTrackingSetup.resources

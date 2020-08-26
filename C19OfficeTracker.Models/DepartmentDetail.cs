@@ -20,6 +20,6 @@ namespace C19OfficeTracker.Models
         public string Location { get; set; }
         [Display(Name = "Room")]
         public string Room { get; set; }
-        //public ICollection<Employee> Employees { get; set; }
+        public ICollection<Employee> Employees { get; set; }
     }
 }

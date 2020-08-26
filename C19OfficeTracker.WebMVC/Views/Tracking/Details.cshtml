@@ -1,0 +1,90 @@
+﻿@model C19OfficeTracker.Models.TrackingDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TrackingDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackingId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SymptomAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SymptomAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaskAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaskAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TrackingId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

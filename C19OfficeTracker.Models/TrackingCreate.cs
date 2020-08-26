@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C19OfficeTracker.Data
+namespace C19OfficeTracker.Models
 {
-    public class Tracking
+    public class TrackingCreate
     {
-        [Key]
         public int TrackingId { get; set; }
-        public Guid IndividualId { get; set; }
         [Required]
         public DateTime TrackDate { get; set; }
         [Required]
         [MaxLength(3, ErrorMessage = "Please enter ( yes or no ) only.")]
+        [Display(Name = "Symptoms of Covid19 ")]
         public string SymptomAnswer { get; set; }
         [Required]
         [MaxLength(3, ErrorMessage = "Please enter ( yes or no ) only.")]
@@ -34,7 +32,6 @@ namespace C19OfficeTracker.Data
         public string GroupAnswer { get; set; }
         [Required]
         public int EmpId { get; set; }
-        [ForeignKey(nameof(EmpId))]
-        public virtual Employee Employee { get; set; }
+        
     }
 }
