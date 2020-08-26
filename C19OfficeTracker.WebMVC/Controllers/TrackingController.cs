@@ -92,6 +92,27 @@ namespace C19OfficeTracker.WebMVC.Controllers
             ModelState.AddModelError("", "The tracking date could not be updated.");
             return View(model);
         }
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateTrackingService();
+            var model = svc.GetTrackingById(id);
+
+            return View(model);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateTrackingService();
+
+            service.DeleteTracking(id);
+
+            TempData["SaveResult"] = "Your Tracking for date was deleted";
+
+            return RedirectToAction("Index");
+        }
         private TrackingService CreateTrackingService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

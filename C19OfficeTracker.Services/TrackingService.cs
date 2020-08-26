@@ -23,6 +23,7 @@ namespace C19OfficeTracker.Services
                 {
                     TrackingId = model.TrackingId,
                     TrackDate = model.TrackDate,
+                    IndividualId = _userId,
                     SymptomAnswer = model.SymptomAnswer,
                     ContactAnswer = model.ContactAnswer,
                     TempAnswer = model.TempAnswer,
@@ -84,8 +85,10 @@ namespace C19OfficeTracker.Services
                         SymptomAnswer = entity.SymptomAnswer,
                         ContactAnswer = entity.ContactAnswer,
                         TempAnswer = entity.TempAnswer,
-                        Temperature = entity.Temperature
-                    };
+                        Temperature = entity.Temperature,
+                        MaskAnswer = entity.MaskAnswer,
+                        GroupAnswer = entity.GroupAnswer
+            };
             }
         }
         public bool UpdateTracking(TrackingEdit model)
