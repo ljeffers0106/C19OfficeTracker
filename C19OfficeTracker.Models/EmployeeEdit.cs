@@ -27,7 +27,7 @@ namespace C19OfficeTracker.Models
         [Required]
         [Display(Name = "Position Title")]
         public Position TypeOfPosition { get; set; }
-        [Required]
+        
         [Display(Name = "Department Id")]
         public int DeptId { get; set; }
     }

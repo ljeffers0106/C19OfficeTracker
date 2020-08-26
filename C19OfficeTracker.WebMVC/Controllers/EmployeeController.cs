@@ -81,7 +81,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
             }
             var service = CreateEmployeeService();
 
-            if (service.UpdateNote(model))
+            if (service.UpdateEmployee(model))
             {
                 TempData["SaveResult"] = "The employee was updated.";
                 return RedirectToAction("Index");

@@ -26,7 +26,7 @@ namespace C19OfficeTracker.Models
         public string Gender { get; set; }
         [Required]
         public Position TypeOfPosition { get; set; }
-        [Required]
+       
         public int DeptId { get; set; }
     }
 }

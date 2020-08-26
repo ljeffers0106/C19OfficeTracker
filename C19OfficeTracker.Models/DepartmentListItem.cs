@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C19OfficeTracker.Data
+namespace C19OfficeTracker.Models
 {
-    public class Department
+    public class DepartmentListItem
     {
-        [Key]
+        [Display(Name = "Department ID")]
         public int DeptId { get; set; }
-        [Required]
+        [Display(Name = "Name")]
         public string DeptName { get; set; }
+        [Display(Name = "Building Number")]
         public int Building { get; set; }
-        [Required]
+        [Display(Name = "Location")]
         public string Location { get; set; }
-        [Required]
+        [Display(Name = "Room")]
         public string Room { get; set; }
-        //public ICollection<Employee> Employees { get; set; }
     }
 }

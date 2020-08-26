@@ -48,6 +48,7 @@ namespace C19OfficeTracker.Services
                         .Employees
                        // .Where(e => e.IndividualId == _userId)
                         .Where(e => e.FullName != null)
+                        .OrderBy(e => e.FullName)
                         .Select(
                             e =>
                                 new EmployeeListItem
@@ -87,7 +88,7 @@ namespace C19OfficeTracker.Services
                     };
             }
         }
-        public bool UpdateNote(EmployeeEdit model)
+        public bool UpdateEmployee(EmployeeEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {

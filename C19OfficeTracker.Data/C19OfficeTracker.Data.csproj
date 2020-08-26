@@ -66,6 +66,14 @@
     <Compile Include="Migrations\202008251439412_RemovedInheritance.Designer.cs">
       <DependentUpon>202008251439412_RemovedInheritance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008261534234_MakeDeptIDNullable.cs" />
+    <Compile Include="Migrations\202008261534234_MakeDeptIDNullable.Designer.cs">
+      <DependentUpon>202008261534234_MakeDeptIDNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008261548248_RemovedNullableDeptId.cs" />
+    <Compile Include="Migrations\202008261548248_RemovedNullableDeptId.Designer.cs">
+      <DependentUpon>202008261548248_RemovedNullableDeptId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tracking.cs" />
@@ -80,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008251439412_RemovedInheritance.resx">
       <DependentUpon>202008251439412_RemovedInheritance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008261534234_MakeDeptIDNullable.resx">
+      <DependentUpon>202008261534234_MakeDeptIDNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008261548248_RemovedNullableDeptId.resx">
+      <DependentUpon>202008261548248_RemovedNullableDeptId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
