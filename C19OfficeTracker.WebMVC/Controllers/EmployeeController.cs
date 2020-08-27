@@ -1,4 +1,5 @@
-﻿using C19OfficeTracker.Models;
+﻿using C19OfficeTracker.Data;
+using C19OfficeTracker.Models;
 using C19OfficeTracker.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -31,6 +32,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(EmployeeCreate model)
         {
+
             if (!ModelState.IsValid) return View(model);
            
 

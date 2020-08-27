@@ -32,4 +32,18 @@ namespace C19OfficeTracker.Data
         [ForeignKey(nameof(DeptId))]
         public virtual Department Department { get; set; }
     }
+    public struct ConvertEnum
+    {
+        public int Value
+        {
+            get;
+            set;
+        }
+        public String Text
+        {
+            get;
+            set;
+        }
+    }
+
 }
