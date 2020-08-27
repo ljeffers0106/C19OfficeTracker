@@ -19,7 +19,7 @@ namespace C19OfficeTracker.Models
         public string ContactAnswer { get; set; }
         [Display(Name = "Temperature Taken")]
         public string TempAnswer { get; set; }
-        [Display(Name = "Temperature Registered")]
+        [Display(Name = "Temperature")]
         public double Temperature { get; set; }
         [Display(Name = "Employee ID")]
         public int EmpId { get; set; }

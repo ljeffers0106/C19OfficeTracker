@@ -16,13 +16,13 @@ namespace C19OfficeTracker.Models
         public string SymptomAnswer { get; set; }
         [Display(Name = "Contact with Covid19 positive person")]
         public string ContactAnswer { get; set; }
-        [Display(Name = "Temperature taken with 90 mins of start time")]
+        [Display(Name = "Temperature taken within 90 mins of start time")]
         public string TempAnswer { get; set; }
         [Display(Name = "Temperature registered")]
         public double Temperature { get; set; }
         [Display(Name = "Practice regular mask usage")]
         public string MaskAnswer { get; set; }
-        [Display(Name = "Large group Exposure in past 14 days")]
+        [Display(Name = "Large group exposure in past 14 days")]
         public string GroupAnswer { get; set; }
         [Display(Name = "Employee ID")]
         public int EmpId { get; set; }
