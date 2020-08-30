@@ -1,10 +1,10 @@
-﻿using C19OfficeTracker.Models;
+﻿using C19OfficeTracker.Data;
+using C19OfficeTracker.Models;
 using C19OfficeTracker.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace C19OfficeTracker.WebMVC.Controllers
@@ -25,6 +25,12 @@ namespace C19OfficeTracker.WebMVC.Controllers
         // Get
         public ActionResult Create()
         {
+            List<Employee> Employees = CreateEmployeeService().GetEmployeeData().ToList();
+            ViewBag.EmpId = Employees.Select(o => new SelectListItem()
+            {
+                Value = o.EmpId.ToString(),
+                Text = o.FullName,
+            });
             return View();
         }
         [HttpPost]
@@ -38,8 +44,23 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             if (service.CreateTracking(model))
             {
-                TempData["SaveResult"] = "Your Tracking for today was created.";
-                return RedirectToAction("Index");
+                if (model.Temperature > 101)
+                {
+                    TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Temperature > 100";
+                    return RedirectToAction("Index");
+                }
+                if (model.SymptomAnswer == "Yes")
+                {
+                    TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need tested for COVID-19";
+                    return RedirectToAction("Index");
+                }
+                if (model.ContactAnswer == "Yes")
+                {
+                    TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need to be put in Quarantine";
+                    return RedirectToAction("Index");
+                }
+                TempData["SaveResult"] = "Your Tracking for today was created. - Approved to work today!";
+                    return RedirectToAction("Index");
             };
 
             return View(model);
@@ -85,8 +106,8 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             if (service.UpdateTracking(model))
             {
-                TempData["SaveResult"] = "The tracking date was updated.";
-                return RedirectToAction("Index");
+                    TempData["SaveResult"] = "The tracking date was updated.";
+                    return RedirectToAction("Index");
             }
 
             ModelState.AddModelError("", "The tracking date could not be updated.");
@@ -119,7 +140,12 @@ namespace C19OfficeTracker.WebMVC.Controllers
             var service = new TrackingService(userId);
             return service;
         }
-
+        private EmployeeService CreateEmployeeService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new EmployeeService(userId);
+            return service;
+        }
 
     }
 }

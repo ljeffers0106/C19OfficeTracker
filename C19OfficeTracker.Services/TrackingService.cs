@@ -22,7 +22,7 @@ namespace C19OfficeTracker.Services
                 new Tracking()
                 {
                     TrackingId = model.TrackingId,
-                    TrackDate = model.TrackDate,
+                    TrackDate = DateTime.Now,
                     IndividualId = _userId,
                     SymptomAnswer = model.SymptomAnswer,
                     ContactAnswer = model.ContactAnswer,

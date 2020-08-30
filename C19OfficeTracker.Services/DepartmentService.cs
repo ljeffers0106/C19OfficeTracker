@@ -58,6 +58,14 @@ namespace C19OfficeTracker.Services
                 return query.ToArray();
             }
         }
+        public IEnumerable<Department> GetDepartmentsData()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                        
+                return (ctx.Departments.ToList());
+            }
+        }
         public DepartmentDetail GetDepartmentById(int id)
         {
             using (var ctx = new ApplicationDbContext())

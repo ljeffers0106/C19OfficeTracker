@@ -24,8 +24,15 @@ namespace C19OfficeTracker.WebMVC.Controllers
         }
         // Add method
         // Get
+        
         public ActionResult Create()
         {
+            List<Department> Departments = CreateDepartmentService().GetDepartmentsData().ToList();
+            ViewBag.DeptId = Departments.Select(o => new SelectListItem()
+            {
+                Value = o.DeptId.ToString(),
+                Text = o.DeptName,
+            });
             return View();
         }
         [HttpPost]
@@ -34,7 +41,6 @@ namespace C19OfficeTracker.WebMVC.Controllers
         {
 
             if (!ModelState.IsValid) return View(model);
-           
 
             var service = CreateEmployeeService();
 
@@ -57,6 +63,13 @@ namespace C19OfficeTracker.WebMVC.Controllers
         {
             var service = CreateEmployeeService();
             var detail = service.GetEmployeeById(id);
+            List<Department> Departments = CreateDepartmentService().GetDepartmentsData().ToList();
+            ViewBag.DeptId = Departments.Select(o => new SelectListItem()
+            {
+                Value = o.DeptId.ToString(),
+                Text = o.DeptName,
+                Selected = o.DeptId == detail.DeptId
+            });
             var model =
                 new EmployeeEdit
                 {
@@ -68,6 +81,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
                     TypeOfPosition = detail.TypeOfPosition,
                     DeptId = detail.DeptId
                 };
+       
             return View(model);
         }
         [HttpPost]
@@ -99,6 +113,11 @@ namespace C19OfficeTracker.WebMVC.Controllers
             return service;
         }
 
-       
+        private DepartmentService CreateDepartmentService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new DepartmentService(userId);
+            return service;
+        }
     }
 }

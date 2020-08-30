@@ -18,6 +18,6 @@ namespace C19OfficeTracker.Data
         public string Location { get; set; }
         [Required]
         public string Room { get; set; }
-        //public ICollection<Employee> Employees { get; set; }
+        public ICollection<Employee> Employees { get; set; }
     }
 }

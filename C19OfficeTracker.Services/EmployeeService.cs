@@ -88,6 +88,14 @@ namespace C19OfficeTracker.Services
                     };
             }
         }
+        public IEnumerable<Employee> GetEmployeeData()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+
+                return (ctx.Employees.ToList());
+            }
+        }
         public bool UpdateEmployee(EmployeeEdit model)
         {
             using (var ctx = new ApplicationDbContext())
