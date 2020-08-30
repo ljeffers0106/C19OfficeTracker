@@ -1,114 +1,114 @@
 ﻿@model C19OfficeTracker.Models.TrackingCreate
-<h1><label>Current Date : @DateTime.Now.ToString()</label><br />  </h1>
+
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
+<hr />
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    <h4>Tracking Create</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.EmpId, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownListFor(model => model.EmpId, ViewBag.EmpId as SelectList, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.EmpId, "", new { @class = "text-danger" })
-        </div>
-    </div>
+    <div class="form-horizontal">
+        <h4>Tracking Create</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.TrackDate, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.TrackDate, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.TrackDate, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmpId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.EmpId, ViewBag.EmpId as SelectList, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EmpId, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(model => model.SymptomAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("SymptomAnswer", new List<SelectListItem>
-            {
-                new SelectListItem { Text = "Yes", Value="Yes"},
-                new SelectListItem { Text = "No", Value="No"}
-            }, "Select Answer")
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrackDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TrackDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TrackDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-            @Html.ValidationMessageFor(model => model.SymptomAnswer, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(model => model.ContactAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("ContactAnswer", new List<SelectListItem>
-           {
-               new SelectListItem { Text = "Yes", Value="Yes"},
-               new SelectListItem { Text = "No", Value="No"}
-           }, "Select Answer")
-            @Html.ValidationMessageFor(model => model.ContactAnswer, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(model => model.TempAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("TempAnswer", new List<SelectListItem>
-            {
-                new SelectListItem { Text = "Yes", Value="Yes"},
-                new SelectListItem { Text = "No", Value="No"}
-            }, "Select Answer")
-            @Html.ValidationMessageFor(model => model.TempAnswer, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(model => model.Temperature, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Temperature, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Temperature, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(model => model.MaskAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("MaskAnswer", new List<SelectListItem>
-            {
-                new SelectListItem { Text = "Yes", Value="Yes"},
-                new SelectListItem { Text = "No", Value="No"}
-            }, "Select Answer")
-            @Html.ValidationMessageFor(model => model.MaskAnswer, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(model => model.GroupAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("GroupAnswer", new List<SelectListItem>
-            {
-                new SelectListItem { Text = "Yes", Value="Yes"},
-                new SelectListItem { Text = "No", Value="No"}
-            }, "Select Answer")
-            @Html.ValidationMessageFor(model => model.GroupAnswer, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <hr />
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.SymptomAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("SymptomAnswer", new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "Yes", Value="Yes"},
+                    new SelectListItem { Text = "No", Value="No"}
+                }, "Select Answer")
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+                @Html.ValidationMessageFor(model => model.SymptomAnswer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.ContactAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ContactAnswer", new List<SelectListItem>
+               {
+                   new SelectListItem { Text = "Yes", Value="Yes"},
+                   new SelectListItem { Text = "No", Value="No"}
+               }, "Select Answer")
+                @Html.ValidationMessageFor(model => model.ContactAnswer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.TempAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("TempAnswer", new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "Yes", Value="Yes"},
+                    new SelectListItem { Text = "No", Value="No"}
+                }, "Select Answer")
+                @Html.ValidationMessageFor(model => model.TempAnswer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Temperature, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Temperature, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Temperature, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaskAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MaskAnswer", new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "Yes", Value="Yes"},
+                    new SelectListItem { Text = "No", Value="No"}
+                }, "Select Answer")
+                @Html.ValidationMessageFor(model => model.MaskAnswer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.GroupAnswer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("GroupAnswer", new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "Yes", Value="Yes"},
+                    new SelectListItem { Text = "No", Value="No"}
+                }, "Select Answer")
+                @Html.ValidationMessageFor(model => model.GroupAnswer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
 }
 
 <div>

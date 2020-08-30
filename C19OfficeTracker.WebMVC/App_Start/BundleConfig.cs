@@ -23,7 +23,7 @@ namespace C19OfficeTracker.WebMVC
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-superhero.css",
+                      "~/Content/bootstrap-united.css",
                       "~/Content/site.css"));
         }
     }

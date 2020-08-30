@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<C19OfficeTracker.Models.TrackingListItem>
-<h1><label>Current Date : @DateTime.Now.ToString()</label><br />  </h1>
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tracking Index</h2>
+<hr />
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -17,65 +18,65 @@
             <span>&times;</span>
         </button>
         @TempData["SaveResult"]
-        
+
     </div>
 }
-    <table class="table">
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SymptomAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TrackingId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrackDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SymptomAnswer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ContactAnswer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempAnswer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temperature)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmpId)
-            </th>
-            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrackingId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrackDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SymptomAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TrackingId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TrackingId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TrackingId })
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TrackingId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TrackDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SymptomAnswer)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ContactAnswer)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TempAnswer)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Temperature)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmpId)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.TrackingId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.TrackingId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.TrackingId })
-                </td>
-            </tr>
-        }
-
-    </table>
+</table>
