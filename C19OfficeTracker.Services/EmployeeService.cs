@@ -58,7 +58,8 @@ namespace C19OfficeTracker.Services
                                     Phone = e.Phone,
                                     Gender = e.Gender,
                                     TypeOfPosition = e.TypeOfPosition,
-                                    DeptId = e.DeptId
+                                    DeptId = e.DeptId,
+                                    DeptName = e.Department.DeptName
                                 }
                         );
 
@@ -84,7 +85,8 @@ namespace C19OfficeTracker.Services
                         Email = entity.Email,
                         Gender = entity.Gender,
                         TypeOfPosition = entity.TypeOfPosition,
-                        DeptId = entity.DeptId
+                        DeptId = entity.DeptId,
+                        DeptName = entity.Department.DeptName
                     };
             }
         }

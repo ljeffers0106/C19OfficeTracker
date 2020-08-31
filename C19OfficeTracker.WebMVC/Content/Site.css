@@ -2,7 +2,6 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -24,15 +23,16 @@ textarea {
 }
 .jumbotron {
     text-align: center;
-    color: black;
+    color: white;
     background-image: url( https://www.amprogress.org/wp-content/uploads/2020/03/outbreak-coronavirus-world-1024x506px.jpg);
     background-size: cover;
 }
-.first {
-   
-}
 .second {
-    
+    background-color: linen;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    color: darkslategray;
 }
 .pic1 {
     background-color: linen;

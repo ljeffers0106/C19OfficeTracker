@@ -9,7 +9,7 @@ namespace C19OfficeTracker.Models
 {
     public class TrackingDetail
     {
-        [Display(Name = "Tracking ID")]
+        [Display(Name = "Track ID")]
         public int TrackingId { get; set; }
         public DateTime TrackDate { get; set; }
         [Display(Name = "Symptoms of Covid19")]
@@ -24,7 +24,9 @@ namespace C19OfficeTracker.Models
         public string MaskAnswer { get; set; }
         [Display(Name = "Large group exposure in past 14 days")]
         public string GroupAnswer { get; set; }
-        [Display(Name = "Employee ID")]
+        [Display(Name = "Emp ID")]
         public int EmpId { get; set; }
+        [Display(Name = "Employee Name")]
+        public string FullName { get; set; }
     }
 }

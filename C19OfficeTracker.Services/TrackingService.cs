@@ -60,7 +60,8 @@ namespace C19OfficeTracker.Services
                                     SymptomAnswer = e.SymptomAnswer,
                                     ContactAnswer = e.ContactAnswer,
                                     TempAnswer = e.TempAnswer,
-                                    Temperature = e.Temperature
+                                    Temperature = e.Temperature,
+                                    FullName = e.Employee.FullName
                                 }
                         );
 
@@ -87,8 +88,9 @@ namespace C19OfficeTracker.Services
                         TempAnswer = entity.TempAnswer,
                         Temperature = entity.Temperature,
                         MaskAnswer = entity.MaskAnswer,
-                        GroupAnswer = entity.GroupAnswer
-            };
+                        GroupAnswer = entity.GroupAnswer,
+                        FullName = entity.Employee.FullName
+                    };
             }
         }
         public bool UpdateTracking(TrackingEdit model)

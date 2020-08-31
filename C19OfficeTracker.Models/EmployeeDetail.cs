@@ -22,7 +22,9 @@ namespace C19OfficeTracker.Models
         public string Gender { get; set; }
         [Display(Name = "Position Title")]
         public Position TypeOfPosition { get; set; }
-        [Display(Name = "Department Id")]
+        [Display(Name = "Dept Id")]
         public int DeptId { get; set; }
+        [Display(Name = "Department")]
+        public string DeptName { get; set; }
     }   
 }

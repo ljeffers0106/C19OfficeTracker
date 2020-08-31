@@ -10,7 +10,7 @@ namespace C19OfficeTracker.Models
 {
     public class DepartmentDetail
     {
-        [Display(Name = "Department ID")]
+        [Display(Name = "Dept ID")]
         public int DeptId { get; set; }
         [Display(Name = "Name")]
         public string DeptName { get; set; }

@@ -9,11 +9,11 @@ namespace C19OfficeTracker.Models
 {
     public class DepartmentListItem
     {
-        [Display(Name = "Department ID")]
+        [Display(Name = "Dept ID")]
         public int DeptId { get; set; }
         [Display(Name = "Name")]
         public string DeptName { get; set; }
-        [Display(Name = "Building Number")]
+        [Display(Name = "Building#")]
         public int Building { get; set; }
         [Display(Name = "Location")]
         public string Location { get; set; }

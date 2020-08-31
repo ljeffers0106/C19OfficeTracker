@@ -10,26 +10,19 @@
     <h4>Tracking Detail</h4>
     <hr />
     <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.TrackingId)
+        @Html.HiddenFor(model => model.EmpId)
+        
         <dt>
-            @Html.DisplayNameFor(model => model.TrackingId)
+            @Html.DisplayNameFor(model => model.FullName)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.TrackingId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EmpId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmpId)
+            @Html.DisplayFor(model => model.FullName)
         </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.TrackDate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.TrackDate)
         </dd>

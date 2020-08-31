@@ -12,17 +12,19 @@
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
-    <div class="alert alert-success fade in" role="alert">
+<div class="alert alert-warning" role="alert">
+    <!-- <div class="alert alert-warning fade in" role="alert">-->
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+    </button>
+    @TempData["SaveResult"]
 
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
-
-    </div>
+</div>
 }
 <table class="table">
+
     <tr>
+
         <th>
             @Html.DisplayNameFor(model => model.TrackingId)
         </th>
@@ -42,9 +44,8 @@
             @Html.DisplayNameFor(model => model.Temperature)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EmpId)
+            @Html.DisplayNameFor(model => model.FullName)
         </th>
-        <th></th>
     </tr>
 
     @foreach (var item in Model)
@@ -69,7 +70,7 @@
                 @Html.DisplayFor(modelItem => item.Temperature)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EmpId)
+                @Html.DisplayFor(modelItem => item.FullName)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.TrackingId }) |
