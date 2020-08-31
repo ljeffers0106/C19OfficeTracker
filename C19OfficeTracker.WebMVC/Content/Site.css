@@ -22,3 +22,45 @@ select,
 textarea {
     max-width: 280px;
 }
+.jumbotron {
+    text-align: center;
+    color: black;
+    background-image: url( https://www.amprogress.org/wp-content/uploads/2020/03/outbreak-coronavirus-world-1024x506px.jpg);
+    background-size: cover;
+}
+.first {
+   
+}
+.second {
+    
+}
+.pic1 {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
+
+.pic2 {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
+
+.pic3 {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
+ 
