@@ -29,10 +29,12 @@ textarea {
 }
 .second {
     background-color: linen;
+    opacity: .65;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .5rem;
-    color: darkslategray;
+    /*color: darkslategray;*/
+    color: black;
 }
 .pic1 {
     background-color: linen;
