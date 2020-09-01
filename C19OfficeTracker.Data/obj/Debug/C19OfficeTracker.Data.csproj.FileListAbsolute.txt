@@ -9,13 +9,9 @@ C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.InitialCreate.resources
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.RemovedInheritance.resources
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.MakeDeptIDNullable.resources
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.RemovedNullableDeptId.resources
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.CompletedTrackingSetup.resources
-C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.csproj.GenerateResource.cache
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.dll
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.pdb
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.InitialMigrationAfterBuildingTable.resources
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.csproj.GenerateResource.cache

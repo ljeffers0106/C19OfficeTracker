@@ -37,7 +37,8 @@ namespace C19OfficeTracker.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Tracking> Trackings { get; set; }
-       
+        public DbSet<Building> Buildings { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

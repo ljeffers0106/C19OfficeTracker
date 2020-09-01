@@ -22,7 +22,7 @@ namespace C19OfficeTracker.Services
                 new Department()
                 {
                     DeptName = model.DeptName,
-                    Building = model.Building,
+                    BuildingId = model.BuildingId,
                     Location = model.Location,
                     Room = model.Room
                 };
@@ -49,7 +49,7 @@ namespace C19OfficeTracker.Services
                                 {
                                     DeptId = e.DeptId,
                                     DeptName = e.DeptName,
-                                    Building = e.Building,
+                                    BuildingName = e.Building.BuildingName,
                                     Location = e.Location,
                                     Room = e.Room
                                 }
@@ -62,7 +62,7 @@ namespace C19OfficeTracker.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                        
+
                 return (ctx.Departments.ToList());
             }
         }
@@ -80,7 +80,8 @@ namespace C19OfficeTracker.Services
                     {
                         DeptId = entity.DeptId,
                         DeptName = entity.DeptName,
-                        Building = entity.Building,
+                        BuildingId = entity.BuildingId,
+                        BuildingName = entity.Building.BuildingName,
                         Location = entity.Location,
                         Room = entity.Room
                     };
@@ -96,9 +97,23 @@ namespace C19OfficeTracker.Services
                         .Single(e => e.DeptId == model.DeptId);
                 entity.DeptId = model.DeptId;
                 entity.DeptName = model.DeptName;
-                entity.Building = model.Building;
+                entity.BuildingId = model.BuildingId;
                 entity.Location = model.Location;
                 entity.Room = model.Room;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteDepartment(int deptId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Departments
+                        .Single(e => e.DeptId == deptId);
+
+                ctx.Departments.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

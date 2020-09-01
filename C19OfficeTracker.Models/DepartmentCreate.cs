@@ -17,7 +17,7 @@ namespace C19OfficeTracker.Models
         public string DeptName { get; set; }
         [Required(ErrorMessage = "Building Number is required")]
         [Display(Name = "Building Number")]
-        public int Building { get; set; }
+        public int BuildingId { get; set; }
         [Required(ErrorMessage = "Location is required")]
         [Display(Name = "Location")]
         [MaxLength(60, ErrorMessage = "Please enter up to 60 characters")]
@@ -26,6 +26,5 @@ namespace C19OfficeTracker.Models
         [Display(Name = "Room")]
         [MaxLength(20, ErrorMessage = "Please enter up to 20 characters")]
         public string Room { get; set; }
-        //public ICollection<Employee> Employees { get; set; }
     }
 }

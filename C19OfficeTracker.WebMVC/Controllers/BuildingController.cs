@@ -9,15 +9,15 @@ using System.Web.Mvc;
 
 namespace C19OfficeTracker.WebMVC.Controllers
 {
-    public class DepartmentController : Controller
+    public class BuildingController : Controller
     {
         [Authorize]
         // GET: Departments
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DepartmentService(userId);
-            var model = service.GetDepartments();
+            var service = new BuildingService(userId);
+            var model = service.GetBuildings();
 
             return View(model);
         }
@@ -30,16 +30,16 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DepartmentCreate model)
+        public ActionResult Create(BuildingCreate model)
         {
             if (!ModelState.IsValid) return View(model);
 
 
-            var service = CreateDepartmentService();
+            var service = CreateBuildingService();
 
-            if (service.CreateDepartment(model))
+            if (service.CreateBuilding(model))
             {
-                TempData["SaveResult"] = "Your Department was created.";
+                TempData["SaveResult"] = "The  Department was successfully created.";
                 return RedirectToAction("Index");
             };
 
@@ -47,53 +47,54 @@ namespace C19OfficeTracker.WebMVC.Controllers
         }
         public ActionResult Details(int id)
         {
-            var svc = CreateDepartmentService();
-            var model = svc.GetDepartmentById(id);
+            var svc = CreateBuildingService();
+            var model = svc.GetBuildingById(id);
 
             return View(model);
         }
         public ActionResult Edit(int id)
         {
-            var service = CreateDepartmentService();
-            var detail = service.GetDepartmentById(id);
+            var service = CreateBuildingService();
+            var detail = service.GetBuildingById(id);
             var model =
-                new DepartmentEdit
+                new BuildingEdit
                 {
-                    DeptId = detail.DeptId,
-                    DeptName = detail.DeptName,
                     BuildingId = detail.BuildingId,
-                    Location = detail.Location,
-                    Room = detail.Room
+                    BuildingName = detail.BuildingName,
+                    Address = detail.Address,
+                    City = detail.City,
+                    State = detail.State,
+                    Postal = detail.Postal
                 };
             return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, DepartmentEdit model)
+        public ActionResult Edit(int id, BuildingEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.DeptId != id)
+            if (model.BuildingId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
-            var service = CreateDepartmentService();
+            var service = CreateBuildingService();
 
-            if (service.UpdateDepartment(model))
+            if (service.UpdateBuilding(model))
             {
-                TempData["SaveResult"] = "The department was updated.";
+                TempData["SaveResult"] = "The building was successfully updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "The department could not be updated.");
+            ModelState.AddModelError("", "The building could not be updated.");
             return View(model);
         }
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateDepartmentService();
-            var model = svc.GetDepartmentById(id);
+            var svc = CreateBuildingService();
+            var model = svc.GetBuildingById(id);
 
             return View(model);
         }
@@ -102,18 +103,18 @@ namespace C19OfficeTracker.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
         {
-            var service = CreateDepartmentService();
+            var service = CreateBuildingService();
 
-            service.DeleteDepartment(id);
+            service.DeleteBuilding(id);
 
-            TempData["SaveResult"] = "The Department date was deleted";
+            TempData["SaveResult"] = "The Building was successfully deleted";
 
             return RedirectToAction("Index");
         }
-        private DepartmentService CreateDepartmentService()
+        private BuildingService CreateBuildingService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DepartmentService(userId);
+            var service = new BuildingService(userId);
             return service;
         }
 

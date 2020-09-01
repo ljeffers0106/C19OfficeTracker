@@ -16,7 +16,7 @@ namespace C19OfficeTracker.Models
         public string DeptName { get; set; }
         [Required(ErrorMessage = "Building Number is required")]
         [Display(Name = "Building Number")]
-        public int Building { get; set; }
+        public int BuildingId { get; set; }
         [Required(ErrorMessage = "Location is required")]
         [Display(Name = "Location")]
         [MaxLength(60, ErrorMessage = "Please enter up to 60 characters")]

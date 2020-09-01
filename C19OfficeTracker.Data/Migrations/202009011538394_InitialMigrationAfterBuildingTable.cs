@@ -1,23 +1,38 @@
-namespace C19OfficeTracker.Data.Migrations
+﻿namespace C19OfficeTracker.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class InitialMigrationAfterBuildingTable : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Building",
+                c => new
+                    {
+                        BuildingId = c.Int(nullable: false, identity: true),
+                        BuildingName = c.String(nullable: false),
+                        Address = c.String(nullable: false),
+                        City = c.String(nullable: false),
+                        State = c.String(nullable: false),
+                        Postal = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.BuildingId);
+            
             CreateTable(
                 "dbo.Department",
                 c => new
                     {
                         DeptId = c.Int(nullable: false, identity: true),
                         DeptName = c.String(nullable: false),
-                        Building = c.Int(nullable: false),
+                        BuildingId = c.Int(nullable: false),
                         Location = c.String(nullable: false),
                         Room = c.String(nullable: false),
                     })
-                .PrimaryKey(t => t.DeptId);
+                .PrimaryKey(t => t.DeptId)
+                .ForeignKey("dbo.Building", t => t.BuildingId, cascadeDelete: false)
+                .Index(t => t.BuildingId);
             
             CreateTable(
                 "dbo.Employee",
@@ -35,7 +50,7 @@ namespace C19OfficeTracker.Data.Migrations
                         Phone = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.EmpId)
-                .ForeignKey("dbo.Department", t => t.DeptId, cascadeDelete: true)
+                .ForeignKey("dbo.Department", t => t.DeptId, cascadeDelete: false)
                 .Index(t => t.DeptId);
             
             CreateTable(
@@ -67,6 +82,7 @@ namespace C19OfficeTracker.Data.Migrations
                 c => new
                     {
                         TrackingId = c.Int(nullable: false, identity: true),
+                        IndividualId = c.Guid(nullable: false),
                         TrackDate = c.DateTime(nullable: false),
                         SymptomAnswer = c.String(nullable: false, maxLength: 3),
                         ContactAnswer = c.String(nullable: false, maxLength: 3),
@@ -77,7 +93,7 @@ namespace C19OfficeTracker.Data.Migrations
                         EmpId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.TrackingId)
-                .ForeignKey("dbo.Employee", t => t.EmpId, cascadeDelete: true)
+                .ForeignKey("dbo.Employee", t => t.EmpId, cascadeDelete: false)
                 .Index(t => t.EmpId);
             
             CreateTable(
@@ -138,12 +154,14 @@ namespace C19OfficeTracker.Data.Migrations
             DropForeignKey("dbo.Tracking", "EmpId", "dbo.Employee");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
             DropForeignKey("dbo.Employee", "DeptId", "dbo.Department");
+            DropForeignKey("dbo.Department", "BuildingId", "dbo.Building");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.Tracking", new[] { "EmpId" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
             DropIndex("dbo.Employee", new[] { "DeptId" });
+            DropIndex("dbo.Department", new[] { "BuildingId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
@@ -152,6 +170,7 @@ namespace C19OfficeTracker.Data.Migrations
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Employee");
             DropTable("dbo.Department");
+            DropTable("dbo.Building");
         }
     }
 }

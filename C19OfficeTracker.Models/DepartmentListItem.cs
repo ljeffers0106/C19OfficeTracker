@@ -13,8 +13,8 @@ namespace C19OfficeTracker.Models
         public int DeptId { get; set; }
         [Display(Name = "Name")]
         public string DeptName { get; set; }
-        [Display(Name = "Building#")]
-        public int Building { get; set; }
+        [Display(Name = "Building Name")]
+        public string BuildingName { get; set; }
         [Display(Name = "Location")]
         public string Location { get; set; }
         [Display(Name = "Room")]

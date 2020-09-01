@@ -59,7 +59,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
                     TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need to be put in Quarantine";
                     return RedirectToAction("Index");
                 }
-                TempData["SaveResult"] = "Your Tracking for today was created. - Approved to work today!";
+                TempData["SaveResult"] = "You have been APPROVED to work today!";
                     return RedirectToAction("Index");
             };
 

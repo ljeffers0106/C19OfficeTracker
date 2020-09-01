@@ -15,7 +15,9 @@ namespace C19OfficeTracker.Models
         [Display(Name = "Name")]
         public string DeptName { get; set; }
         [Display(Name = "Building Number")]
-        public int Building { get; set; }
+        public int BuildingId { get; set; }
+        [Display(Name = "Building Name")]
+        public string BuildingName { get; set; }
         [Display(Name = "Location")]
         public string Location { get; set; }
         [Display(Name = "Room")]

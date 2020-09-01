@@ -57,29 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="DomainUser.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202008251323119_InitialCreate.cs" />
-    <Compile Include="Migrations\202008251323119_InitialCreate.Designer.cs">
-      <DependentUpon>202008251323119_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008251439412_RemovedInheritance.cs" />
-    <Compile Include="Migrations\202008251439412_RemovedInheritance.Designer.cs">
-      <DependentUpon>202008251439412_RemovedInheritance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008261534234_MakeDeptIDNullable.cs" />
-    <Compile Include="Migrations\202008261534234_MakeDeptIDNullable.Designer.cs">
-      <DependentUpon>202008261534234_MakeDeptIDNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008261548248_RemovedNullableDeptId.cs" />
-    <Compile Include="Migrations\202008261548248_RemovedNullableDeptId.Designer.cs">
-      <DependentUpon>202008261548248_RemovedNullableDeptId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008261914174_CompletedTrackingSetup.cs" />
-    <Compile Include="Migrations\202008261914174_CompletedTrackingSetup.Designer.cs">
-      <DependentUpon>202008261914174_CompletedTrackingSetup.cs</DependentUpon>
+    <Compile Include="Migrations\202009011538394_InitialMigrationAfterBuildingTable.cs" />
+    <Compile Include="Migrations\202009011538394_InitialMigrationAfterBuildingTable.designer.cs">
+      <DependentUpon>202009011538394_InitialMigrationAfterBuildingTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,23 +102,6 @@
     <None Include="Scripts\umd\popper.js.flow" />
     <None Include="Scripts\umd\popper.js.map" />
     <None Include="Scripts\umd\popper.min.js.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008251323119_InitialCreate.resx">
-      <DependentUpon>202008251323119_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008251439412_RemovedInheritance.resx">
-      <DependentUpon>202008251439412_RemovedInheritance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008261534234_MakeDeptIDNullable.resx">
-      <DependentUpon>202008261534234_MakeDeptIDNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008261548248_RemovedNullableDeptId.resx">
-      <DependentUpon>202008261548248_RemovedNullableDeptId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008261914174_CompletedTrackingSetup.resx">
-      <DependentUpon>202008261914174_CompletedTrackingSetup.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -234,6 +202,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009011538394_InitialMigrationAfterBuildingTable.resx">
+      <DependentUpon>202009011538394_InitialMigrationAfterBuildingTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

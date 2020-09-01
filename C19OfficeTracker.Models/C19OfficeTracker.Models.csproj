@@ -57,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildingCreate.cs" />
+    <Compile Include="BuildingDetail.cs" />
+    <Compile Include="BuildingEdit.cs" />
+    <Compile Include="BuildingListItem.cs" />
     <Compile Include="DepartmentCreate.cs" />
     <Compile Include="DepartmentDetail.cs" />
     <Compile Include="DepartmentEdit.cs" />

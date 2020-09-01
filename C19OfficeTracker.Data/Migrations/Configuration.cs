@@ -1,11 +1,8 @@
-
-
-namespace C19OfficeTracker.Data.Migrations
+﻿namespace C19OfficeTracker.Data.Migrations
 {
-    using C19OfficeTracker.Data;
-    using System.Data.Entity.Migrations;
     using System;
     using System.Data.Entity;
+    using System.Data.Entity.Migrations;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<C19OfficeTracker.Data.ApplicationDbContext>
@@ -13,22 +10,67 @@ namespace C19OfficeTracker.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "C19OfficeTracker.Data.ApplicationDbContext";
         }
 
         protected override void Seed(C19OfficeTracker.Data.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+            //  to avoid creating duplicate seed data.
+            context.Buildings.AddOrUpdate(x => x.BuildingId,
+                                   new Building
+                                   {
+                                       BuildingId = 1,
+                                       BuildingName = "Old Red Brick - 4 story",
+                                       Address = "999 Main Street ",
+                                       City = "Carmel",
+                                       State = "IN",
+                                       Postal = "46032"
+                                   },
+                                   new Building
+                                   {
+                                       BuildingId = 2,
+                                       BuildingName = "Merchants Center",
+                                       Address = "9750 Hague Road ",
+                                       City = "Fishers",
+                                       State = "IN",
+                                       Postal = "46038"
+                                   },
+                                   new Building
+                                   {
+                                       BuildingId = 3,
+                                       BuildingName = "Bank One Tower",
+                                       Address = "111 Monument Circle ",
+                                       City = "Indianapolis",
+                                       State = "IN",
+                                       Postal = "46204"
+                                   },
+                                   new Building
+                                   {
+                                       BuildingId = 4,
+                                       BuildingName = "State Farm Building",
+                                       Address = "32 Madison Ave ",
+                                       City = "Indianapolis",
+                                       State = "IN",
+                                       Postal = "46227"
+                                   },
+                                    new Building
+                                    {
+                                        BuildingId = 5,
+                                        BuildingName = "Tucker Building",
+                                        Address = "2932 Main Street ",
+                                        City = "Greenwood",
+                                        State = "IN",
+                                        Postal = "46143"
+                                    }
+                   );
             context.Departments.AddOrUpdate(x => x.DeptId,
                         new Department
                         {
                             DeptId = 1,
                             DeptName = "Accounting",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "2nd Floor",
                             Room = "205B"
                         },
@@ -36,7 +78,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 2,
                             DeptName = "IT",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "2nd Floor",
                             Room = "201"
                         },
@@ -44,7 +86,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 3,
                             DeptName = "Human Resources",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "1st Floor",
                             Room = "101"
                         },
@@ -52,7 +94,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 4,
                             DeptName = "Sales",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "3rd Floor",
                             Room = "301"
                         },
@@ -60,7 +102,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 5,
                             DeptName = "Marketing",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "3rd Floor",
                             Room = "305"
                         },
@@ -68,7 +110,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 6,
                             DeptName = "Customer Service",
-                            Building = 2,
+                            BuildingId = 2,
                             Location = "1st Floor",
                             Room = "107"
                         },
@@ -76,7 +118,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 7,
                             DeptName = "Legal",
-                            Building = 2,
+                            BuildingId = 2,
                             Location = "2nd Floor",
                             Room = "201"
                         },
@@ -84,7 +126,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 8,
                             DeptName = "Finance",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "2nd Floor",
                             Room = "210"
                         },
@@ -92,7 +134,7 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 9,
                             DeptName = "Operations",
-                            Building = 2,
+                            BuildingId = 2,
                             Location = "3rd Floor",
                             Room = "301"
                         },
@@ -100,12 +142,11 @@ namespace C19OfficeTracker.Data.Migrations
                         {
                             DeptId = 10,
                             DeptName = "Payroll",
-                            Building = 1,
+                            BuildingId = 1,
                             Location = "1st Floor",
                             Room = "105"
                         }
                 );
-            
         }
     }
 }
