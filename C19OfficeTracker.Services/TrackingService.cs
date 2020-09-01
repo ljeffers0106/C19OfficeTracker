@@ -110,6 +110,7 @@ namespace C19OfficeTracker.Services
                 entity.MaskAnswer = model.MaskAnswer;
                 entity.GroupAnswer = model.GroupAnswer;
                 entity.EmpId = model.EmpId;
+              
 
                 return ctx.SaveChanges() == 1;
             }

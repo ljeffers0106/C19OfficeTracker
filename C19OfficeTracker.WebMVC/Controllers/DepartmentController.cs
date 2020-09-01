@@ -15,8 +15,9 @@ namespace C19OfficeTracker.WebMVC.Controllers
         // GET: Departments
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DepartmentService(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            //var service = new DepartmentService(userId);
+            var service = new DepartmentService();
             var model = service.GetDepartments();
 
             return View(model);
@@ -112,8 +113,9 @@ namespace C19OfficeTracker.WebMVC.Controllers
         }
         private DepartmentService CreateDepartmentService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DepartmentService(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            //var service = new DepartmentService(userId);
+            var service = new DepartmentService();
             return service;
         }
 

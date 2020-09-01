@@ -45,8 +45,11 @@ namespace C19OfficeTracker.Models
         [Display(Name = "Have you attended any gatherings > 12 \n" +
             "people in the past 14 days?")]
         public string GroupAnswer { get; set; }
-        [Required(ErrorMessage = "Employee is required")]
+        
         [Display(Name = "Employee ID")]
         public int EmpId { get; set; }
+        
+        [Display(Name = "Employee Name")]
+        public string FullName { get; set; }
     }
 }

@@ -115,8 +115,9 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
         private DepartmentService CreateDepartmentService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DepartmentService(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            //var service = new DepartmentService(userId);
+            var service = new DepartmentService();
             return service;
         }
     }

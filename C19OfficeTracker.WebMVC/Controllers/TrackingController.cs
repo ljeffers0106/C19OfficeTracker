@@ -31,7 +31,11 @@ namespace C19OfficeTracker.WebMVC.Controllers
                 Value = o.EmpId.ToString(),
                 Text = o.FullName,
             });
-            return View();
+            var model = new TrackingCreate()
+            {
+                TrackDate = DateTime.Now
+            };
+            return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -87,7 +91,8 @@ namespace C19OfficeTracker.WebMVC.Controllers
                     Temperature = detail.Temperature,
                     MaskAnswer = detail.MaskAnswer,
                     GroupAnswer = detail.GroupAnswer,
-                    EmpId = detail.EmpId
+                    EmpId = detail.EmpId,
+                    FullName = detail.FullName
                 };
             return View(model);
         }

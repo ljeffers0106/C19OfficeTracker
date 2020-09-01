@@ -10,12 +10,12 @@ namespace C19OfficeTracker.Services
 {
     public class DepartmentService
     {
-        private readonly Guid _userId;
+        //private readonly Guid _userId;
 
-        public DepartmentService(Guid userId)
-        {
-            _userId = userId;
-        }
+        //public DepartmentService(Guid userId)
+        //{
+         //   _userId = userId;
+        //}
         public bool CreateDepartment(DepartmentCreate model)
         {
             var entity =
