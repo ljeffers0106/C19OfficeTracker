@@ -15,3 +15,4 @@ C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.pdb
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.Migrations.InitialMigrationAfterBuildingTable.resources
 C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\DotNetProjects\RedBadge\C19OfficeTracker\C19OfficeTracker.Data\obj\Debug\C19OfficeTracker.Data.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using C19OfficeTracker.Models;
+﻿using C19OfficeTracker.Data;
+using C19OfficeTracker.Models;
 using C19OfficeTracker.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -47,6 +48,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
         }
         public ActionResult Details(int id)
         {
+          //  List<Department> Departments = CreateDepartmentService().GetDepartmentsData().ToList();
             var svc = CreateBuildingService();
             var model = svc.GetBuildingById(id);
 
@@ -117,6 +119,10 @@ namespace C19OfficeTracker.WebMVC.Controllers
             var service = new BuildingService(userId);
             return service;
         }
-
+       // private DepartmentService CreateDepartmentService()
+       // {
+       //     var service = new DepartmentService();
+       //     return service;
+       // }
     }
 }

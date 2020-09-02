@@ -84,7 +84,8 @@ namespace C19OfficeTracker.Services
                         Address = entity.Address,
                         City = entity.City,
                         State = entity.State,
-                        Postal = entity.Postal
+                        Postal = entity.Postal,
+                        Departments = ctx.Departments.Where(d => d.BuildingId == entity.BuildingId).ToList()
                     };
             }
         }

@@ -21,6 +21,6 @@ namespace C19OfficeTracker.Data
         public string State { get; set; }
         [Required]
         public string Postal { get; set; }
-        
+        public ICollection<Department> Departments { get; set; }
     }
 }

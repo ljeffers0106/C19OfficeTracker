@@ -65,4 +65,10 @@ textarea {
     text-align: center;
     border: 2px lightgray;
 }
+.input-validation-error {
+    border: 2px solid red;
+}
+.field-validation-error {
+    color: red;
+}
  

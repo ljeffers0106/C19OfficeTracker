@@ -83,7 +83,8 @@ namespace C19OfficeTracker.Services
                         BuildingId = entity.BuildingId,
                         BuildingName = entity.Building.BuildingName,
                         Location = entity.Location,
-                        Room = entity.Room
+                        Room = entity.Room,
+                        Employees = ctx.Employees.Where(d => d.DeptId == entity.DeptId).ToList()
                     };
             }
         }
