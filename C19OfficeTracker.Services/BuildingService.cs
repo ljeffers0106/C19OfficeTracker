@@ -10,12 +10,6 @@ namespace C19OfficeTracker.Services
 {
     public class BuildingService
     {
-        private readonly Guid _userId;
-
-        public BuildingService(Guid userId)
-        {
-            _userId = userId;
-        }
         public bool CreateBuilding(BuildingCreate model)
         {
             var entity =

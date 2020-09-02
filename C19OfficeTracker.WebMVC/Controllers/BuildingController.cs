@@ -16,8 +16,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
         // GET: Departments
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new BuildingService(userId);
+            var service = new BuildingService();
             var model = service.GetBuildings();
 
             return View(model);
@@ -115,14 +114,9 @@ namespace C19OfficeTracker.WebMVC.Controllers
         }
         private BuildingService CreateBuildingService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new BuildingService(userId);
+            var service = new BuildingService();
             return service;
         }
-       // private DepartmentService CreateDepartmentService()
-       // {
-       //     var service = new DepartmentService();
-       //     return service;
-       // }
+      
     }
 }

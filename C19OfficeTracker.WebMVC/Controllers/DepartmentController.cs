@@ -1,4 +1,5 @@
-﻿using C19OfficeTracker.Models;
+﻿using C19OfficeTracker.Data;
+using C19OfficeTracker.Models;
 using C19OfficeTracker.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -15,8 +16,6 @@ namespace C19OfficeTracker.WebMVC.Controllers
         // GET: Departments
         public ActionResult Index()
         {
-            //var userId = Guid.Parse(User.Identity.GetUserId());
-            //var service = new DepartmentService(userId);
             var service = new DepartmentService();
             var model = service.GetDepartments();
 
@@ -26,6 +25,12 @@ namespace C19OfficeTracker.WebMVC.Controllers
         // Get
         public ActionResult Create()
         {
+            List<Building> Buildings = CreateBuildingService().GetBuildingsData().ToList();
+            ViewBag.BuildingId = Buildings.Select(o => new SelectListItem()
+            {
+                Value = o.BuildingId.ToString(),
+                Text = o.BuildingName,
+            });
             return View();
         }
 
@@ -57,6 +62,13 @@ namespace C19OfficeTracker.WebMVC.Controllers
         {
             var service = CreateDepartmentService();
             var detail = service.GetDepartmentById(id);
+            List<Building> Buildings = CreateBuildingService().GetBuildingsData().ToList();
+            ViewBag.BuildingId = Buildings.Select(o => new SelectListItem()
+            {
+                Value = o.BuildingId.ToString(),
+                Text = o.BuildingName,
+                Selected = o.BuildingId == detail.BuildingId
+            });
             var model =
                 new DepartmentEdit
                 {
@@ -113,9 +125,12 @@ namespace C19OfficeTracker.WebMVC.Controllers
         }
         private DepartmentService CreateDepartmentService()
         {
-            //var userId = Guid.Parse(User.Identity.GetUserId());
-            //var service = new DepartmentService(userId);
             var service = new DepartmentService();
+            return service;
+        }
+        private BuildingService CreateBuildingService()
+        {
+            var service = new BuildingService();
             return service;
         }
 

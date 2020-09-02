@@ -10,12 +10,6 @@ namespace C19OfficeTracker.Services
 {
     public class DepartmentService
     {
-        //private readonly Guid _userId;
-
-        //public DepartmentService(Guid userId)
-        //{
-         //   _userId = userId;
-        //}
         public bool CreateDepartment(DepartmentCreate model)
         {
             var entity =
@@ -58,12 +52,12 @@ namespace C19OfficeTracker.Services
                 return query.ToArray();
             }
         }
-        public IEnumerable<Department> GetDepartmentsData()
+        public IEnumerable<Building> GetBuildingsData()
         {
             using (var ctx = new ApplicationDbContext())
             {
 
-                return (ctx.Departments.ToList());
+                return (ctx.Buildings.ToList());
             }
         }
         public DepartmentDetail GetDepartmentById(int id)
@@ -86,6 +80,14 @@ namespace C19OfficeTracker.Services
                         Room = entity.Room,
                         Employees = ctx.Employees.Where(d => d.DeptId == entity.DeptId).ToList()
                     };
+            }
+        }
+        public IEnumerable<Department> GetDepartmentsData()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+
+                return (ctx.Departments.ToList());
             }
         }
         public bool UpdateDepartment(DepartmentEdit model)
