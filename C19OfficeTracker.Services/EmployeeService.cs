@@ -86,7 +86,8 @@ namespace C19OfficeTracker.Services
                         Gender = entity.Gender,
                         TypeOfPosition = entity.TypeOfPosition,
                         DeptId = entity.DeptId,
-                        DeptName = entity.Department.DeptName
+                        DeptName = entity.Department.DeptName,
+                        Tracking = ctx.Trackings.Where(d => d.EmpId == entity.EmpId && d.TrackDate >= DateTime.Today).ToList()
                     };
             }
         }

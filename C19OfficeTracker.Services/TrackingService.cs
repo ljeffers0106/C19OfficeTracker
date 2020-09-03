@@ -47,8 +47,8 @@ namespace C19OfficeTracker.Services
                 var query =
                     ctx
                         .Trackings
-                        // .Where(e => e.IndividualId == _userId)
-                        .Where(e => e.TrackDate != null)
+                        .Where(e => e.IndividualId == _userId)
+                        //.Where(e => e.TrackDate != null)
                         .OrderBy(e => e.TrackDate)
                         .Select(
                             e =>
@@ -101,6 +101,7 @@ namespace C19OfficeTracker.Services
                     ctx
                         .Trackings
                         .Single(e => e.TrackingId == model.TrackingId && e.IndividualId == _userId);
+
                 entity.TrackingId = model.TrackingId;
                 entity.TrackDate = model.TrackDate;
                 entity.SymptomAnswer = model.SymptomAnswer;
@@ -127,6 +128,32 @@ namespace C19OfficeTracker.Services
                 ctx.Trackings.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
+            }
+        }
+        public IEnumerable<TrackingReport> GetTrackingQuestions()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Trackings
+                        .Where(e => e.SymptomAnswer == "Yes" || e.ContactAnswer == "Yes" || e.Temperature > 100)
+                        .OrderByDescending(e => e.TrackDate)
+                        .Select(
+                            e =>
+                                new TrackingReport
+                                {
+                                    EmpId = e.EmpId,
+                                    TrackingId = e.TrackingId,
+                                    TrackDate = e.TrackDate,
+                                    SymptomAnswer = e.SymptomAnswer,
+                                    ContactAnswer = e.ContactAnswer,
+                                    Temperature = e.Temperature,
+                                    FullName = e.Employee.FullName
+                                }
+                        );
+
+                return query.ToArray();
             }
         }
     }

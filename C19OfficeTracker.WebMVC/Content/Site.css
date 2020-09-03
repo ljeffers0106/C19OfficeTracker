@@ -71,4 +71,9 @@ textarea {
 .field-validation-error {
     color: red;
 }
- 
+.framing-table {
+    border: 5px solid gray;
+}
+.hightlight {
+    color: red;
+}

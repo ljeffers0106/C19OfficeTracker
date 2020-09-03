@@ -13,27 +13,11 @@
     <dl class="dl-horizontal">
 
         <dt>
-            @Html.DisplayNameFor(model => model.DeptId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DeptId)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.DeptName)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.DeptName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BuildingId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BuildingId)
         </dd>
 
         <dt>
@@ -71,12 +55,12 @@
 }
 else
 {
-    <ul>
+    <ol>
         @foreach (var employee in Model.Employees)
         {
             <li><strong> @employee.FullName</strong></li>
         }
-    </ul>
+    </ol>
 }
 <hr />
 <p>

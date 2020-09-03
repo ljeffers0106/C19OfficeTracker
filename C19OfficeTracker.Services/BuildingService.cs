@@ -79,7 +79,7 @@ namespace C19OfficeTracker.Services
                         City = entity.City,
                         State = entity.State,
                         Postal = entity.Postal,
-                        Departments = ctx.Departments.Where(d => d.BuildingId == entity.BuildingId).ToList()
+                        Departments = ctx.Departments.Where(d => d.BuildingId == entity.BuildingId).OrderBy(d => d.DeptName).ToList()
                     };
             }
         }

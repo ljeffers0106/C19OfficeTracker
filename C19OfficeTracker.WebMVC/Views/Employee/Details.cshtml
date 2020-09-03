@@ -11,15 +11,7 @@
     <h4>Employee Detail</h4>
     <hr />
     <dl class="dl-horizontal">
-        
-        <dt>
-            @Html.DisplayNameFor(model => model.EmpId)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.EmpId)
-        </dd>
-        
         <dt>
             @Html.DisplayNameFor(model => model.FullName)
         </dt>
@@ -27,7 +19,7 @@
         <dd>
             @Html.DisplayFor(model => model.FullName)
         </dd>
-        
+
         <dt>
             @Html.DisplayNameFor(model => model.Phone)
         </dt>
@@ -35,7 +27,7 @@
         <dd>
             @Html.DisplayFor(model => model.Phone)
         </dd>
-       
+
         <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
@@ -43,7 +35,7 @@
         <dd>
             @Html.DisplayFor(model => model.Email)
         </dd>
-        
+
         <dt>
             @Html.DisplayNameFor(model => model.Gender)
         </dt>
@@ -51,7 +43,7 @@
         <dd>
             @Html.DisplayFor(model => model.Gender)
         </dd>
-        
+
         <dt>
             @Html.DisplayNameFor(model => model.DeptId)
         </dt>
@@ -59,7 +51,7 @@
         <dd>
             @Html.DisplayFor(model => model.DeptId)
         </dd>
-        
+
         <dt>
             @Html.DisplayNameFor(model => model.DeptName)
         </dt>
@@ -67,8 +59,34 @@
         <dd>
             @Html.DisplayFor(model => model.DeptName)
         </dd>
-       
+
     </dl>
+    <hr />
+    <h4> Today's Tracking Data</h4>
+    <hr />
+    @if (Model.Tracking.Count == 0)
+    {
+        <text><strong>No tracking data in the system for today.</strong></text>
+        <hr />
+    }
+    else
+    {
+<ul>
+    @foreach (var tracking in Model.Tracking)
+    {
+        {
+            <li><strong> @tracking.TrackDate</strong></li>
+            <li><label>-------------------------------------------</label></li>
+            <li><label>Symptoms of Covid19....</label><strong> @tracking.SymptomAnswer</strong></li>
+            <li><label>-------------------------------------------</label></li>
+            <li><label>Contact with Covid19...</label><strong> @tracking.ContactAnswer</strong></li>
+            <li><label>-------------------------------------------</label></li>
+            <li><label>Temperature today......</label><strong> @tracking.Temperature</strong></li>
+        }
+    }
+</ul>
+        <hr />
+    }
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.EmpId }) |

@@ -31,5 +31,6 @@ namespace C19OfficeTracker.Data
         public int DeptId { get; set; }
         [ForeignKey(nameof(DeptId))]
         public virtual Department Department { get; set; }
+        public ICollection<Tracking> Tracking { get; set; }
     }
 }

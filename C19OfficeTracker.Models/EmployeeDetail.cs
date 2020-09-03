@@ -26,5 +26,6 @@ namespace C19OfficeTracker.Models
         public int DeptId { get; set; }
         [Display(Name = "Department")]
         public string DeptName { get; set; }
+        public ICollection<Tracking> Tracking { get; set; }
     }   
 }

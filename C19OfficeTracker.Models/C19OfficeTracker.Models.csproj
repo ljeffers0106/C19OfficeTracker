@@ -74,6 +74,7 @@
     <Compile Include="TrackingDetail.cs" />
     <Compile Include="TrackingEdit.cs" />
     <Compile Include="TrackingListItem.cs" />
+    <Compile Include="TrackingReport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

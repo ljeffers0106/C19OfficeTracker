@@ -48,7 +48,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             if (service.CreateTracking(model))
             {
-                if (model.Temperature > 101)
+                if (model.Temperature >= 100)
                 {
                     TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Temperature > 100";
                     return RedirectToAction("Index");
@@ -138,6 +138,15 @@ namespace C19OfficeTracker.WebMVC.Controllers
             TempData["SaveResult"] = "Your Tracking for date was deleted";
 
             return RedirectToAction("Index");
+        }
+        // GET: Tracking
+        public ActionResult FollowUp()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new TrackingService(userId);
+            var model = service.GetTrackingQuestions();
+
+            return View(model);
         }
         private TrackingService CreateTrackingService()
         {
