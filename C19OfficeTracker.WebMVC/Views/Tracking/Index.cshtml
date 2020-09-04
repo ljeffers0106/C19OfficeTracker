@@ -10,12 +10,21 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<!--  This is a negative result -->
+<!--  This is a successful result -->
+@if (TempData.ContainsKey("SaveResult1"))
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult1"]
 
+    </div>
+}
+<!--  This is a negative result -->
 @if (TempData.ContainsKey("SaveResult2"))
 {
     <div class="alert alert-danger" role="alert">
-        <!-- <div class="alert alert-warning fade in" role="alert">-->
         <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
         </button>
@@ -23,15 +32,14 @@
 
     </div>
 }
-<!--  This is a successful result -->
-@if (TempData.ContainsKey("SaveResult1"))
+<!--  This is a information result -->
+@if (TempData.ContainsKey("SaveResult3"))
 {
-    <div class="alert alert-success" role="alert">
-        <!-- <div class="alert alert-warning fade in" role="alert">-->
+    <div class="alert alert-info" role="alert">
         <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
         </button>
-        @TempData["SaveResult1"]
+        @TempData["SaveResult3"]
 
     </div>
 }

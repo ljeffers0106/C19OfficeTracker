@@ -63,6 +63,11 @@ namespace C19OfficeTracker.WebMVC.Controllers
                     TempData["SaveResult2"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need to be put in Quarantine";
                     return RedirectToAction("Index");
                 }
+                if (model.TempAnswer == "No")
+                {
+                    TempData["SaveResult2"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Must take your Temperature within 90 mins";
+                    return RedirectToAction("Index");
+                }
                 TempData["SaveResult1"] = "You have been APPROVED to work today!";
                     return RedirectToAction("Index");
             };
@@ -135,7 +140,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             service.DeleteTracking(id);
 
-            TempData["SaveResult1"] = "Your Tracking for date was deleted";
+            TempData["SaveResult3"] = "Your Tracking for date was deleted";
 
             return RedirectToAction("Index");
         }
