@@ -478,12 +478,12 @@
     <Content Include="Views\Building\Details.cshtml" />
     <Content Include="Views\Building\Edit.cshtml" />
     <Content Include="Views\Building\Delete.cshtml" />
-    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Tracking\FollowUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\App_LocalResources\" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

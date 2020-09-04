@@ -39,11 +39,15 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - C19 Office Tracker</p>
+            <footer>
+                    <p class="float-right">
+                        <img src="@Url.Content("~/Content/images/TinyGoodPic.jpg")" />
+                    </p>
+                    <p class="float-right">&copy; @DateTime.Now.Year - C19 Office Tracker   .</p>
 
-            <p>Current Date : @DateTime.Now.ToString()</p>
-        </footer>
+                    <p>Current Date : @DateTime.Now.ToString()</p>
+                
+            </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

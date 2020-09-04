@@ -77,3 +77,6 @@ textarea {
 .hightlight {
     color: red;
 }
+.float-right {
+    float: right;
+}
