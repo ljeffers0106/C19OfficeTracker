@@ -10,14 +10,28 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@if (TempData.ContainsKey("SaveResult"))
+<!--  This is a negative result -->
+
+@if (TempData.ContainsKey("SaveResult2"))
 {
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-danger" role="alert">
         <!-- <div class="alert alert-warning fade in" role="alert">-->
         <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
         </button>
-        @TempData["SaveResult"]
+        @TempData["SaveResult2"]
+
+    </div>
+}
+<!--  This is a successful result -->
+@if (TempData.ContainsKey("SaveResult1"))
+{
+    <div class="alert alert-success" role="alert">
+        <!-- <div class="alert alert-warning fade in" role="alert">-->
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult1"]
 
     </div>
 }
@@ -47,31 +61,31 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.TrackDate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SymptomAnswer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ContactAnswer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.TempAnswer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Temperature)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.FullName)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.TrackingId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.TrackingId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.TrackingId })
-    </td>
-</tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrackDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SymptomAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TrackingId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TrackingId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TrackingId })
+            </td>
+        </tr>
     }
 
 </table>

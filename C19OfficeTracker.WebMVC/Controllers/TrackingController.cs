@@ -48,22 +48,22 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             if (service.CreateTracking(model))
             {
-                if (model.Temperature >= 100)
+                if (model.Temperature >= 100.4)
                 {
-                    TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Temperature > 100";
+                    TempData["SaveResult2"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Temperature >= 100.4";
                     return RedirectToAction("Index");
                 }
                 if (model.SymptomAnswer == "Yes")
                 {
-                    TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need tested for COVID-19";
+                    TempData["SaveResult2"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need tested for COVID-19";
                     return RedirectToAction("Index");
                 }
                 if (model.ContactAnswer == "Yes")
                 {
-                    TempData["SaveResult"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need to be put in Quarantine";
+                    TempData["SaveResult2"] = "DO NOT REPORT TO WORK - Contact YOUR Manager - Need to be put in Quarantine";
                     return RedirectToAction("Index");
                 }
-                TempData["SaveResult"] = "You have been APPROVED to work today!";
+                TempData["SaveResult1"] = "You have been APPROVED to work today!";
                     return RedirectToAction("Index");
             };
 
@@ -111,7 +111,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             if (service.UpdateTracking(model))
             {
-                    TempData["SaveResult"] = "The tracking date was updated.";
+                    TempData["SaveResult1"] = "The tracking date was updated.";
                     return RedirectToAction("Index");
             }
 
@@ -135,7 +135,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             service.DeleteTracking(id);
 
-            TempData["SaveResult"] = "Your Tracking for date was deleted";
+            TempData["SaveResult1"] = "Your Tracking for date was deleted";
 
             return RedirectToAction("Index");
         }
