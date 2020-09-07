@@ -66,7 +66,7 @@ EmpId int (foreignkey)
 2.	On this page, make sure you are on the master branch (located directly above the blue box containing the name of the last committed changes)
 <br />
 3.	Once you know you are on the master branch, click the green box containing “Code” and copy the URL given in the dropdown menu, either by copying the link manually or clicking the clipboard icon. 
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/GITHUBCODE.PNG" align="left" width="500" height="180"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/GITHUBCODE.PNG" align="left" width="500" height="200"/>
 <br />
 <br />
 
@@ -82,7 +82,13 @@ EmpId int (foreignkey)
 <br />
 5.	In your command prompt, type “git clone”, put a space after “clone”, then paste the URL you copied from Github. Press enter and the project should clone to your local computer.
 <br />
-
+6.	After the project is cloned, if there are build errors then you may have to restore NuGet packages that come along with the project. Another solution may be restarting Visual Studio.
+<br />
+7.	Once the project is building with no errors, go to the search bar in Visual Studio and click on Tools -> NuGet Package Manager -> Package Manager Console.
+<br />
+8.	Now, inside the package manager console you must change the Default project to C19OfficeTracker.Data (see image below).
+<br />
+9.	Next, click inside the package manager console and type “update-database” (this will seed the ‘Building’and 'Department' tables)
 
 
 <br />
