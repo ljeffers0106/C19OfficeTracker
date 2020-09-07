@@ -96,7 +96,7 @@ EmpId int (foreignkey)
 
 ### Running the Program
 <br />
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Landing.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/C19Landing.PNG" align="left" width="700" height="350"/>
 <br/>
 <br/>
 <br />
@@ -117,7 +117,7 @@ EmpId int (foreignkey)
 <br />
 2.  Add yourself as an employee and use the drop down boxes for Gender, Position, and Departmert  (I would suggest setting up multiple employees for testing purposes)
 <br />
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Employees.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/C19Employees.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
 <br />
@@ -132,7 +132,7 @@ EmpId int (foreignkey)
 <br />
 <br />
 
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Employees1.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/C19Employees1.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
 <br />
@@ -154,7 +154,7 @@ EmpId int (foreignkey)
 (I would suggest setting up multiple employees for testing purposes)
 <br />
 
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Tracking.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/C19Tracking.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
 <br />
@@ -171,7 +171,7 @@ EmpId int (foreignkey)
 <br />
 <br />
 See the example of a message for someone who is told they cannot work below:
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/Tracking2.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/Tracking2.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
 <br />
@@ -190,7 +190,7 @@ See the example of a message for someone who is told they cannot work below:
 4.  The Follow Up option alerts HR or Management to any Employees whose results require monitoring.
 <br />
 
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/FollowUP.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/FollowUP.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
 <br />
@@ -209,7 +209,7 @@ See the example of a message for someone who is told they cannot work below:
 5.  If you need to track down location information for an employee, go to the employee record to see department.  Then look at the department table.
 You can see who else is in that department on the Department Detail screen.
 <br />
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/DeptDetail.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/DeptDetail.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
 <br />
@@ -228,4 +228,4 @@ You can see who else is in that department on the Department Detail screen.
 <br />
 5.  You can look at the Building table to see what Departments are in each Building.  This might be useful if you were trying to track exposure.
 <br />
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/BuildingDetail.PNG" align="left" width="700" height="350"/>
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/BuildingDetail.PNG" align="left" width="700" height="350"/>
