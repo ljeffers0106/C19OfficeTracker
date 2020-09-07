@@ -94,3 +94,5 @@ EmpId int (foreignkey)
 
 
 <br />
+#### Running the Program
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Landing.PNG" align="left" width="700" height="350"/>
