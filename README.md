@@ -13,7 +13,7 @@ of Covid19 but also keeps the Company on track during these trying economic time
 <br />
 ### Database Tables:
 
-#### Building (allows for companies to be spread throughout multiple buildings)
+#### Building (allows for companies to be spread across multiple buildings by department)
 BuildingId int (key),
 BuildingName string,
 Address string,
