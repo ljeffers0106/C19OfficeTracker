@@ -148,6 +148,8 @@ EmpId int (foreignkey)
 <br />
 <br />
 <br />
+<br />
+<br />
 
 3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and readd to get different messages.  
 (I would suggest setting up multiple employees for testing purposes)
@@ -171,3 +173,22 @@ EmpId int (foreignkey)
 <br />
 See the example of a message for someone who is told they cannot work below:
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/Tracking2.PNG" align="left" width="700" height="350"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+4.  The Follow Up option alerts HR or Management to any Employees whose results require monitoring.
+<br />
+
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/FollowUP.PNG" align="left" width="700" height="350"/>
