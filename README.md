@@ -14,6 +14,7 @@ of Covid19 but also keeps the Company on track during these trying economic time
 ### Database Tables:
 
 #### Building (allows for companies to be spread across multiple buildings by department)
+(seeded for testing)
 BuildingId int (key),
 BuildingName string,
 Address string,
@@ -22,6 +23,7 @@ State string,
 Postal string,
 
 #### Department
+(seeded for testing)
 DeptId int (key),
 DeptName string,
 BuildingId (foreignkey),
