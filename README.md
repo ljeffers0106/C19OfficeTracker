@@ -90,9 +90,11 @@ EmpId int (foreignkey)
 <br />
 8.	Now, inside the package manager console you must change the Default project to C19OfficeTracker.Data (see image below).
 <br />
-9.	Next, click inside the package manager console and type “update-database” (this will seed the ‘Building’and 'Department' tables)
+9.	Next, click inside the package manager console and type “update-database” (this will seed the ‘Building’and 'Department' tables).
 
 
 <br />
-#### Running the Program
+
+### Running the Program
+<br />
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Landing.PNG" align="left" width="700" height="350"/>
