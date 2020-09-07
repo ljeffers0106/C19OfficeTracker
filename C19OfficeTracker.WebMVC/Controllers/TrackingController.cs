@@ -153,6 +153,7 @@ namespace C19OfficeTracker.WebMVC.Controllers
 
             return View(model);
         }
+        
         private TrackingService CreateTrackingService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
