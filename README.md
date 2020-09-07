@@ -68,8 +68,7 @@ EmpId int (foreignkey)
 2.	On this page, make sure you are on the master branch (located directly above the blue box containing the name of the last committed changes)
 <br />
 3.	Once you know you are on the master branch, click the green box containing “Code” and copy the URL given in the dropdown menu, either by copying the link manually or clicking the clipboard icon. 
-<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/GITHUBCODE.PNG" align="left" width="500" height="200"/>
-<br />
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/GITHUBCODE.PNG" align="left" width="500" height="200"/>
 <br />
 
 <br />
