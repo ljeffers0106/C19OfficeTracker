@@ -192,3 +192,41 @@ See the example of a message for someone who is told they cannot work below:
 <br />
 
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/FollowUP.PNG" align="left" width="700" height="350"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+5.  If you need to track down location information for an employee, go to the employee record to see department.  Then look at the department table.
+You can see who else is in that department on the Department Detail screen.
+<br />
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/DeptDetail.PNG" align="left" width="700" height="350"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+5.  You can look at the Building table to see what Departments are in each Building.  This might be useful if you were trying to track exposure.
+<br />
+<img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/BuildingDetail.PNG" align="left" width="700" height="350"/>
