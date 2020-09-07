@@ -114,10 +114,9 @@ EmpId int (foreignkey)
 <br />
 <br />
 <br />
-
 1.  Register as a user
 <br />
-2.  Add yourself as an employee use the drop down boxes for Gender, Position, and Departmert  (I would suggest setting up multiple employees for testing purposes)
+2.  Add yourself as an employee and use the drop down boxes for Gender, Position, and Departmert  (I would suggest setting up multiple employees for testing purposes)
 <br />
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Employees.PNG" align="left" width="700" height="350"/>
 <br />
@@ -133,9 +132,7 @@ EmpId int (foreignkey)
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Employees1.PNG" align="left" width="700" height="350"/>
 <br />
 <br />
@@ -151,10 +148,9 @@ EmpId int (foreignkey)
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
-3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and readd to get different messages.  (I would suggest setting up multiple employees for testing purposes)
+
+3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and readd to get different messages.  
+(I would suggest setting up multiple employees for testing purposes)
 <br />
 
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Tracking.PNG" align="left" width="700" height="350"/>
@@ -173,7 +169,5 @@ EmpId int (foreignkey)
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
+See the example of a message for someone who is told they cannot work below:
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/Tracking2.PNG" align="left" width="700" height="350"/>
