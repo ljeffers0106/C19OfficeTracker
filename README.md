@@ -98,3 +98,24 @@ EmpId int (foreignkey)
 ### Running the Program
 <br />
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/C19Landing.PNG" align="left" width="700" height="350"/>
+<br/>
+<br/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+1.  Register as a user
+2.  Add yourself as an employee use the drop down boxes for Gender, Position, and Departmert  (I would suggest setting up multiple employees for testing purposes)
+
