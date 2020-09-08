@@ -65,6 +65,15 @@ textarea {
     text-align: center;
     border: 2px lightgray;
 }
+#loginForm {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
 .input-validation-error {
     border: 2px solid red;
 }
@@ -80,3 +89,7 @@ textarea {
 .float-right {
     float: right;
 }
+.login_btn {
+    width: 100%;
+    background: #c0392b !important;
+    color: white !important;

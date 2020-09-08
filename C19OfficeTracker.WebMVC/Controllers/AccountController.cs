@@ -105,6 +105,57 @@ namespace C19OfficeTracker.WebMVC.Controllers
             }
                
         }
+        // testing new CUSTOM LOGIN
+        [AllowAnonymous]
+        public ActionResult LoginCustom(string returnUrl)
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
+
+        //
+        // POST: /Account/Login
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> LoginCustom(LoginViewModel model, string returnUrl)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            // testing changes - 2 lines below - added the if and else statements to get LastLogin
+            var user = await UserManager.FindAsync(model.Email, model.Password);
+            if (user != null)
+            // if (user != null && user.EmailConfirmed) - Right now EmailConfirmed is always false
+            {
+
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, change to shouldLockout: true
+                var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+                switch (result)
+                {
+                    case SignInStatus.Success:
+                        user.LastLogin = DateTime.Now;
+                        UserManager.Update(user);
+                        return RedirectToLocal(returnUrl);
+                    case SignInStatus.LockedOut:
+                        return View("Lockout");
+                    case SignInStatus.RequiresVerification:
+                        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    case SignInStatus.Failure:
+                    default:
+                        ModelState.AddModelError("", "Invalid login attempt.");
+                        return View(model);
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Invalid Login attempt");
+                return View(model);
+            }
+
+        }
 
         //
         // GET: /Account/VerifyCode

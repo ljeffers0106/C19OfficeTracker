@@ -522,6 +522,7 @@
     <Content Include="Views\Building\Edit.cshtml" />
     <Content Include="Views\Building\Delete.cshtml" />
     <Content Include="Views\Tracking\FollowUp.cshtml" />
+    <Content Include="Views\Account\LoginCustom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
