@@ -7,8 +7,7 @@ The final requirement to earn the Red Badge for this program was to build a .NET
 My project choice was to create an application that tracks the daily health status of employees that are required to report to work in an office during the Covid19 Pandemic.
 
 The purpose of the application is to ensure employees in the office do not spread Covid19 to the other employees working in the office. Employees must signin and answer key
-questions before starting work each day.  If they have any symptoms, have been in contact with a Covid19 positive individual, or if their temperature is higher than 100 degrees, 
-they will not be allowed to work.  The application will direct them as to whether they are able to work or instead must contact their manager for instructions.
+questions before starting work each day.  If they have any symptoms, have been in contact with a Covid19 positive individual, or if their temperature is higher than 100.4 degrees, they will not be allowed to work.  The application will direct them as to whether they are able to work or instead must contact their manager for instructions.
 
 In the case that an employee tests positive it will be much easier to identify other employees that have been in close proximity at work. This not only helps prevent the spread
 of Covid19 but also keeps the Company on track during these trying economic times by protecting it's employees.
@@ -150,8 +149,7 @@ EmpId int (foreignkey)
 <br />
 <br />
 
-3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and readd to get different messages.  
-(I would suggest setting up multiple employees for testing purposes)
+3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and re-add to get different messages.  You should only see the tracking entries you have entered from the Tracking Index screen.  (I would suggest setting up multiple employees for testing purposes.)
 <br />
 
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/C19Tracking.PNG" align="left" width="700" height="350"/>
