@@ -149,8 +149,7 @@ EmpId int (foreignkey)
 <br />
 <br />
 
-3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and readd to get different messages.  
-(I would suggest setting up multiple employees for testing purposes)
+3.  Add some tracking records. It automatically uses todays date - you cannot change the date.  If you want you can delete and re-add to get different messages.  You should only see the tracking entries you have entered from the Tracking Index screen.  (I would suggest setting up multiple employees for testing purposes.)
 <br />
 
 <img src="https://github.com/ljeffers0106/C19OfficeTracker/blob/master/assets/C19Tracking.PNG" align="left" width="700" height="350"/>
