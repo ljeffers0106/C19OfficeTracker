@@ -1,0 +1,95 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.jumbotron {
+    text-align: center;
+    color: white;
+    background-image: url( https://www.amprogress.org/wp-content/uploads/2020/03/outbreak-coronavirus-world-1024x506px.jpg);
+    background-size: cover;
+}
+.second {
+    background-color: linen;
+    opacity: .65;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    /*color: darkslategray;*/
+    color: black;
+}
+.pic1 {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
+
+.pic2 {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
+
+.pic3 {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 2px lightgray;
+}
+#loginForm {
+    background-color: linen;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 5px darkgray;
+}
+.input-validation-error {
+    border: 2px solid red;
+}
+.field-validation-error {
+    color: red;
+}
+.framing-table {
+    border: 5px solid gray;
+}
+.hightlight {
+    color: red;
+}
+.float-right {
+    float: right;
+}
+.login_btn {
+    width: 100%;
+    background: #c0392b !important;
+    color: white !important;

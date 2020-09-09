@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-09-09T16:01:32.8406876Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "C19OfficeTrackerWebMVC20200909104023ResourceGroup"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "ce2b28fc-be18-4bce-891e-9d152c3cf952"
+    }
+  }
+}

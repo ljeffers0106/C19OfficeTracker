@@ -1,0 +1,64 @@
+﻿@model IEnumerable<C19OfficeTracker.Models.TrackingReport>
+@{
+    ViewBag.Title = "FollowUp";
+
+}
+
+<h2> Tracking Results Follow-Up</h2>
+<hr />
+
+<p  class="text-danger"> 
+    <strong>Need to follow-up with these Individuals - they should not have worked on the date reported</strong>
+</p>
+<hr />
+
+<ul>
+    <li>If they displayed symptoms they should be tested.</li>
+    <li>If they were in contact with COVID 19 positive individuals they should quarantine.</li>
+    <li>If they have a temperature over 100.4 degrees they should be tested.</li>
+</ul>
+<hr />
+    
+<table class="table table-striped table-bordered">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SymptomAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrackDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SymptomAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+        </tr>
+    }
+
+</table>
+

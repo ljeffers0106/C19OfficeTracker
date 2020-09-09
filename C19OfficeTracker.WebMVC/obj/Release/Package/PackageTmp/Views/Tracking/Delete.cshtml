@@ -1,0 +1,90 @@
+﻿@model C19OfficeTracker.Models.TrackingDetail
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<hr />
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tracking Detail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SymptomAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SymptomAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaskAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaskAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupAnswer)
+        </dd>
+
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+
